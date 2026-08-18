@@ -1111,6 +1111,14 @@ endpoints:
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
+  - name: 社会工学科（学科サイト）
+    url: "https://shakai.web.nitech.ac.jp/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
   - name: カモラボ（加茂研究室）
     url: "http://kamolabo.web.nitech.ac.jp/"
     interval: 600s
