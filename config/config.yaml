@@ -278,20 +278,6 @@ endpoints:
       - "[STATUS] == 200"
       - "[RESPONSE_TIME] < 10000"
 
-  - name: ワンダーフォーゲル部
-    url: "http://nitwv.club.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 卓球部
-    url: "http://ttc.club.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
   - name: 吹奏楽団
     url: "http://nwo.club.nitech.ac.jp/"
     interval: 600s
@@ -580,13 +566,6 @@ endpoints:
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: plasma研究室
-    url: "http://plasma.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
   - name: 構造物性科学研究室
     url: "http://structure.web.nitech.ac.jp/"
     interval: 600s
@@ -747,7 +726,7 @@ endpoints:
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
   - name: power研究室
-    url: "https://power.web.nitech.ac.jp/index.html"
+    url: "https://power.web.nitech.ac.jp/pslab/index.html"
     interval: 600s
     conditions:
       - "[STATUS] == 200"
@@ -833,7 +812,7 @@ endpoints:
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
   - name: mdlab研究室
-    url: "https://mdlab.web.nitech.ac.jp/"
+    url: "https://mdlab.web.nitech.ac.jp/ja/"
     interval: 600s
     conditions:
       - "[STATUS] == 200"
@@ -953,7 +932,7 @@ endpoints:
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
   - name: iplab研究室
-    url: "https://iplab.web.nitech.ac.jp/"
+    url: "https://iplab.web.nitech.ac.jp/2020/"
     interval: 600s
     conditions:
       - "[STATUS] == 200"
@@ -1078,13 +1057,6 @@ endpoints:
       - "[STATUS] == 200"
       - "[RESPONSE_TIME] < 10000"
 
-  - name: 生態工学研究室
-    url: "http://suiko.web.nitech.ac.jp/~ecology/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
   - name: 河川工学研究室
     url: "http://suiko.web.nitech.ac.jp/~river/"
     interval: 600s
@@ -1094,27 +1066,6 @@ endpoints:
 
   - name: 都市基盤計画分野研究室
     url: "http://suim.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: umecon研究室
-    url: "http://umecon.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: yoshidana研究室
-    url: "http://yoshidana.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: zhang研究室
-    url: "http://zhang.web.nitech.ac.jp/"
     interval: 600s
     conditions:
       - "[STATUS] == 200"
