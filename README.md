@@ -7,52 +7,16 @@
 
 ## 監視対象
 
-| サービス | グループ | URL |
-|---|---|---|
-| 大学公式サイト | 全学 | https://www.nitech.ac.jp/ |
-| 附属図書館 | 全学 | https://www.lib.nitech.ac.jp/ |
-| 図書館蔵書検索（OPAC） | 全学 | https://opac.lib.nitech.ac.jp/opc/ |
-| 情報基盤センター | 情報基盤 | https://www.cc.nitech.ac.jp/ |
-| 権威DNSサーバー ns1 | 情報基盤 | ns1.nitech.ac.jp（DNSクエリ） |
-| 権威DNSサーバー ns2 | 情報基盤 | ns2.nitech.ac.jp（DNSクエリ） |
-| Moodle（オンライン教材） | 教育システム | https://cms7.ict.nitech.ac.jp/moodle40a/ |
-| シラバス公開システム | 教育システム | https://syllabus.ict.nitech.ac.jp/ |
-| 履修登録システム | 教育システム | https://course.web.nitech.ac.jp/ |
-| 基礎類 | 研究・教育組織 | https://kiso.web.nitech.ac.jp/ |
-| 規則・ガイドライン管理システム | 研究・教育組織 | https://kisoku.web.nitech.ac.jp/ |
-| 研究シーズ集 | 研究・教育組織 | https://seeds.web.nitech.ac.jp/ |
-| ソフトウェア集 | 研究・教育組織 | https://software.web.nitech.ac.jp/ |
-| 産学官金連携機構 | 研究・教育組織 | https://sanren.web.nitech.ac.jp/ |
-| リサーチ・アドミニストレーション（URA）室 | 研究・教育組織 | https://rao.web.nitech.ac.jp/ |
-| ダイバーシティ推進センター | 研究・教育組織 | https://diversity.web.nitech.ac.jp/ |
-| 新領域学術院 | 研究・教育組織 | https://nfri.web.nitech.ac.jp/ |
-| 分析装置・機器紹介 | 研究・教育組織 | https://kiki.web.nitech.ac.jp/ |
-| マテリアル先端リサーチインフラ事業 | 研究・教育組織 | https://nano.web.nitech.ac.jp/ |
-| 若手研究イノベータ養成センター | 研究・教育組織 | http://wakate.web.nitech.ac.jp/ |
-| オープンサイエンスポータル | 研究・教育組織 | https://oa.web.nitech.ac.jp/ |
-| オプトバイオテクノロジー研究センター | 研究・教育組織 | http://obtrc.web.nitech.ac.jp/ |
-| NITech AI研究センター | 研究・教育組織 | https://airc.web.nitech.ac.jp/ |
-| 留学生センター | 研究・教育組織 | https://isc.web.nitech.ac.jp/ |
-| 卒業生連携室 | 研究・教育組織 | https://alum.nitech.ac.jp/ |
-| 工学教育総合センター | 研究・教育組織 | http://educenter.web.nitech.ac.jp/ |
-| コンピュータ倶楽部 NITMic | 課外活動団体 | https://nitmic.club.nitech.ac.jp/ |
-| プログラミング部 C0de | 課外活動団体 | https://c0de-web.club.nitech.ac.jp/ |
-| アカペラサークル Grazie!! | 課外活動団体 | https://grazie.club.nitech.ac.jp/ |
-| 管弦楽団 | 課外活動団体 | https://nitorchestra.club.nitech.ac.jp/ |
-| S-EV（ソーラーカー部） | 課外活動団体 | https://solar-car.club.nitech.ac.jp/ |
-| 水泳部 | 課外活動団体 | https://nitswimmingteam.club.nitech.ac.jp/ |
-| ボート部 | 課外活動団体 | http://rowing.club.nitech.ac.jp/ |
-| ワンダーフォーゲル部 | 課外活動団体 | http://nitwv.club.nitech.ac.jp/ |
-| 卓球部 | 課外活動団体 | http://ttc.club.nitech.ac.jp/ |
-| 吹奏楽団 | 課外活動団体 | http://nwo.club.nitech.ac.jp/ |
-| アイスホッケー部 | 課外活動団体 | https://nitech-icehockey.club.nitech.ac.jp/ |
+nitech.ac.jp ドメイン配下で外部からアクセス可能なサービスを、合計150件監視しています。
+大学公式サイト・図書館・情報基盤・教育システムといった全学的なサービスから、
+各学科の研究室、課外活動団体のサイトまで対象に含めています。
 
-ボート部・ワンダーフォーゲル部・卓球部・吹奏楽団は、https が Plesk のデフォルト証明書（期限切れ・自己署名）のままで、
-実際のコンテンツはリダイレクトなしで http のまま配信されているため、http で監視しています。
-アイスホッケー部は実際の証明書自体が期限切れのため、証明書検証をスキップしつつ、証明書の期限切れ自体も検知対象に含めています。
-
-対象を追加・変更する場合は [config/config.yaml](config/config.yaml) を編集してください。
+一覧は [config/config.yaml](config/config.yaml) を参照してください。
 設定項目の詳細は [Gatus のドキュメント](https://github.com/TwiN/gatus#configuration) を参照してください。
+
+一部の研究室・団体サイトは、TLS証明書が自己署名または期限切れのままになっているため、
+`client.insecure: true` で証明書検証をスキップしています。実際にリダイレクトなしで
+http のみで配信されているサイトは、そのまま http で監視しています。
 
 ## ローカルでの動作確認
 
