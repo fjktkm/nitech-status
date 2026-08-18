@@ -94,6 +94,157 @@ endpoints:
       - "[RESPONSE_TIME] < 5000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
+  # 研究・教育組織
+  - name: 基礎類
+    group: 研究・教育組織
+    url: "https://kiso.web.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: 規則・ガイドライン管理システム
+    group: 研究・教育組織
+    url: "https://kisoku.web.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: 研究シーズ集
+    group: 研究・教育組織
+    url: "https://seeds.web.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: ソフトウェア集
+    group: 研究・教育組織
+    url: "https://software.web.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: 産学官金連携機構
+    group: 研究・教育組織
+    url: "https://sanren.web.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: リサーチ・アドミニストレーション（URA）室
+    group: 研究・教育組織
+    url: "https://rao.web.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: ダイバーシティ推進センター
+    group: 研究・教育組織
+    url: "https://diversity.web.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: 新領域学術院
+    group: 研究・教育組織
+    url: "https://nfri.web.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: 分析装置・機器紹介
+    group: 研究・教育組織
+    url: "https://kiki.web.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: マテリアル先端リサーチインフラ事業
+    group: 研究・教育組織
+    url: "https://nano.web.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: 若手研究イノベータ養成センター
+    group: 研究・教育組織
+    url: "http://wakate.web.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+
+  - name: オープンサイエンスポータル
+    group: 研究・教育組織
+    url: "https://oa.web.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: オプトバイオテクノロジー研究センター
+    group: 研究・教育組織
+    url: "http://obtrc.web.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+
+  - name: NITech AI研究センター
+    group: 研究・教育組織
+    url: "https://airc.web.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: 留学生センター
+    group: 研究・教育組織
+    url: "https://isc.web.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: 卒業生連携室
+    group: 研究・教育組織
+    url: "https://alum.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: 工学教育総合センター
+    group: 研究・教育組織
+    url: "http://educenter.web.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+
   # 課外活動団体
   - name: コンピュータ倶楽部 NITMic
     group: 課外活動団体
@@ -103,3 +254,99 @@ endpoints:
       - "[STATUS] == 200"
       - "[RESPONSE_TIME] < 5000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: プログラミング部 C0de
+    group: 課外活動団体
+    url: "https://c0de-web.club.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: アカペラサークル Grazie!!
+    group: 課外活動団体
+    url: "https://grazie.club.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: 管弦楽団
+    group: 課外活動団体
+    url: "https://nitorchestra.club.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: S-EV（ソーラーカー部）
+    group: 課外活動団体
+    url: "https://solar-car.club.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: 水泳部
+    group: 課外活動団体
+    url: "https://nitswimmingteam.club.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # 以下、証明書の期限切れ・自己署名により client.insecure が必要
+  - name: ボート部
+    group: 課外活動団体
+    url: "https://rowing.club.nitech.ac.jp/"
+    interval: 60s
+    client:
+      insecure: true
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+
+  - name: ワンダーフォーゲル部
+    group: 課外活動団体
+    url: "https://nitwv.club.nitech.ac.jp/"
+    interval: 60s
+    client:
+      insecure: true
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+
+  - name: 卓球部
+    group: 課外活動団体
+    url: "https://ttc.club.nitech.ac.jp/"
+    interval: 60s
+    client:
+      insecure: true
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+
+  - name: 吹奏楽団
+    group: 課外活動団体
+    url: "https://nwo.club.nitech.ac.jp/"
+    interval: 60s
+    client:
+      insecure: true
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+
+  - name: アイスホッケー部
+    group: 課外活動団体
+    url: "https://nitech-icehockey.club.nitech.ac.jp/"
+    interval: 60s
+    client:
+      insecure: true
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
