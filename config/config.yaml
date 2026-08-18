@@ -1,0 +1,95 @@
+storage:
+  type: sqlite
+  path: /data/data.db
+
+ui:
+  title: NITech Status
+  header: NITech Status
+  dashboard-subheading: 本サイトは有志が個人の立場で運営する非公式のものであり、名古屋工業大学とは関係がなく、同大学の承認・後援を受けたものでもありません。
+
+endpoints:
+  # 全学
+  - name: 大学公式サイト
+    group: 全学
+    url: "https://www.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: 附属図書館
+    group: 全学
+    url: "https://www.lib.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: 図書館蔵書検索（OPAC）
+    group: 全学
+    url: "https://opac.lib.nitech.ac.jp/opc/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # 情報基盤
+  - name: 情報基盤センター
+    group: 情報基盤
+    url: "https://www.cc.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: 権威DNSサーバー ns1.nitech.ac.jp
+    group: 情報基盤
+    url: "133.68.21.192"
+    interval: 60s
+    dns:
+      query-name: "www.nitech.ac.jp"
+      query-type: "A"
+    conditions:
+      - "[DNS_RCODE] == NOERROR"
+
+  - name: 権威DNSサーバー ns2.nitech.ac.jp
+    group: 情報基盤
+    url: "133.68.2.1"
+    interval: 60s
+    dns:
+      query-name: "www.nitech.ac.jp"
+      query-type: "A"
+    conditions:
+      - "[DNS_RCODE] == NOERROR"
+
+  # 教育システム
+  - name: Moodle（オンライン教材）
+    group: 教育システム
+    url: "https://cms7.ict.nitech.ac.jp/moodle40a/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: シラバス公開システム
+    group: 教育システム
+    url: "https://syllabus.ict.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: 履修登録システム
+    group: 教育システム
+    url: "https://course.web.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"

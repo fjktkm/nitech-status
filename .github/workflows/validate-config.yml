@@ -1,0 +1,42 @@
+name: Validate config
+
+on:
+  push:
+    paths:
+      - "config/**"
+      - "docker-compose.yml"
+  pull_request:
+    paths:
+      - "config/**"
+      - "docker-compose.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check YAML syntax
+        run: python3 -c "import yaml; yaml.safe_load(open('config/config.yaml'))"
+
+      - name: Boot Gatus with config
+        run: |
+          docker compose up -d
+          for i in $(seq 1 30); do
+            if curl -fsS http://localhost:8080/health > /dev/null; then
+              echo "Gatus started successfully"
+              exit 0
+            fi
+            sleep 1
+          done
+          echo "Gatus failed to start"
+          docker compose logs
+          exit 1
+
+      - name: Show logs
+        if: always()
+        run: docker compose logs
+
+      - name: Tear down
+        if: always()
+        run: docker compose down -v
