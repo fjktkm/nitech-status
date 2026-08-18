@@ -468,6 +468,174 @@ endpoints:
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
+  - name: 青木純研究室
+    url: "http://www.ach.nitech.ac.jp/~polymer/aoki/main.htm"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 猪股・小澤研究室
+    url: "https://www.ach.nitech.ac.jp/inorg/ozawa/Japanese/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 岩田・南雲・廣田・古川研究室
+    url: "https://www.ach.nitech.ac.jp/chemeng/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 大北雅一研究室
+    url: "https://www.ach.nitech.ac.jp/physchem/ohkita/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 加藤禎人研究室
+    url: "http://www.ach.nitech.ac.jp/chemeng2/kakoken.html"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 川崎・石井・野崎研究室
+    url: "https://www.ach.nitech.ac.jp/inorg/kawasaki/jp/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 神取・錦野研究室
+    url: "https://www.ach.nitech.ac.jp/physchem/kandori/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 北川・飯國研究室
+    url: "https://www.ach.nitech.ac.jp/analysis19/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 出羽・近藤研究室
+    url: "https://www.ach.nitech.ac.jp/polymer/ydk/index.html"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 中村・安川研究室
+    url: "https://www.ach.nitech.ac.jp/organic/nakamura/index.html"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 山村・宮川研究室
+    url: "https://www.ach.nitech.ac.jp/organic/yamamura/toppage.html"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 小野克彦研究室
+    url: "https://www.ach.nitech.ac.jp/physchem/ono/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 片山耕大研究室
+    url: "https://www.ach.nitech.ac.jp/physchem/katayama/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 住井裕司研究室
+    url: "https://www.ach.nitech.ac.jp/organic/sumii/index.html"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 園山範之研究室
+    url: "https://www.ach.nitech.ac.jp/inorg/sonoyama/Site/Home.html"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 平下恒久研究室
+    url: "https://www.ach.nitech.ac.jp/organic/hirasita/hirasita.html"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 古谷祐詞研究室
+    url: "https://www.ach.nitech.ac.jp/physchem/furutani/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 水野稔久研究室
+    url: "https://www.ach.nitech.ac.jp/polymer/mizuno/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 柳生剛義研究室
+    url: "https://www.ach.nitech.ac.jp/inorg/yagyu/yagyuhome.html"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 山本靖研究室
+    url: "https://www.ach.nitech.ac.jp/physchem/yamamoto/0top.html"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 安達信泰研究室
+    url: "http://www.crl.nitech.ac.jp/comp/index-j.html"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 井田隆研究室
+    url: "http://www.crl.nitech.ac.jp/anal/index-j.html"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 藤正督研究室
+    url: "http://www.crl.nitech.ac.jp/proc/index-j.html"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 石井健斗研究室
+    url: "https://www.crl.nitech.ac.jp/NITech_Fujilab_HP/index.html"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
   - name: csp研究室
     url: "https://csp.web.nitech.ac.jp/"
     interval: 600s
@@ -1033,6 +1201,76 @@ endpoints:
       - "[STATUS] == 200"
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  - name: 片山・金・立岩研究室
+    url: "http://tk-www.elcom.nitech.ac.jp/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 川島・梶岡研究室
+    url: "http://www2.matlab.nitech.ac.jp/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 加藤・谷研究室
+    url: "http://www.katolab.nitech.ac.jp/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 大囿研究室
+    url: "https://www-ozlab.ics.nitech.ac.jp/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 烏山研究室
+    url: "https://www-als.ics.nitech.ac.jp/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 白松・長澤研究室
+    url: "http://www.srmt.nitech.ac.jp/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 伊藤宏隆研究室
+    url: "http://www.center.nitech.ac.jp/~itoh/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 佐藤・坂上研究室
+    url: "http://www.cv.nitech.ac.jp/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 李・上乃研究室
+    url: "http://www.slp.nitech.ac.jp/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
+
+  - name: 南角・橋本研究室
+    url: "http://www.sp.nitech.ac.jp/"
+    interval: 600s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 10000"
 
   - name: 社会工学科（経営システム分野）
     url: "https://sme.web.nitech.ac.jp/"
