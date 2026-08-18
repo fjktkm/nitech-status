@@ -41,13 +41,15 @@
 | 管弦楽団 | 課外活動団体 | https://nitorchestra.club.nitech.ac.jp/ |
 | S-EV（ソーラーカー部） | 課外活動団体 | https://solar-car.club.nitech.ac.jp/ |
 | 水泳部 | 課外活動団体 | https://nitswimmingteam.club.nitech.ac.jp/ |
-| ボート部 | 課外活動団体 | https://rowing.club.nitech.ac.jp/ |
-| ワンダーフォーゲル部 | 課外活動団体 | https://nitwv.club.nitech.ac.jp/ |
-| 卓球部 | 課外活動団体 | https://ttc.club.nitech.ac.jp/ |
-| 吹奏楽団 | 課外活動団体 | https://nwo.club.nitech.ac.jp/ |
+| ボート部 | 課外活動団体 | http://rowing.club.nitech.ac.jp/ |
+| ワンダーフォーゲル部 | 課外活動団体 | http://nitwv.club.nitech.ac.jp/ |
+| 卓球部 | 課外活動団体 | http://ttc.club.nitech.ac.jp/ |
+| 吹奏楽団 | 課外活動団体 | http://nwo.club.nitech.ac.jp/ |
 | アイスホッケー部 | 課外活動団体 | https://nitech-icehockey.club.nitech.ac.jp/ |
 
-一部のクラブサイト（ボート部、ワンダーフォーゲル部、卓球部、吹奏楽団、アイスホッケー部）はTLS証明書が自己署名または期限切れのため、証明書検証をスキップして監視しています。
+ボート部・ワンダーフォーゲル部・卓球部・吹奏楽団は、https が Plesk のデフォルト証明書（期限切れ・自己署名）のままで、
+実際のコンテンツはリダイレクトなしで http のまま配信されているため、http で監視しています。
+アイスホッケー部は実際の証明書自体が期限切れのため、証明書検証をスキップしつつ、証明書の期限切れ自体も検知対象に含めています。
 
 対象を追加・変更する場合は [config/config.yaml](config/config.yaml) を編集してください。
 設定項目の詳細は [Gatus のドキュメント](https://github.com/TwiN/gatus#configuration) を参照してください。

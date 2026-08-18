@@ -300,47 +300,42 @@ endpoints:
       - "[RESPONSE_TIME] < 5000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  # 以下、証明書の期限切れ・自己署名により client.insecure が必要
+  # 以下4件は https が Plesk のデフォルト証明書（期限切れ・自己署名）のままで、
+  # 実際にはリダイレクトなしで http のコンテンツがそのまま使われている
   - name: ボート部
     group: 課外活動団体
-    url: "https://rowing.club.nitech.ac.jp/"
+    url: "http://rowing.club.nitech.ac.jp/"
     interval: 60s
-    client:
-      insecure: true
     conditions:
       - "[STATUS] == 200"
       - "[RESPONSE_TIME] < 5000"
 
   - name: ワンダーフォーゲル部
     group: 課外活動団体
-    url: "https://nitwv.club.nitech.ac.jp/"
+    url: "http://nitwv.club.nitech.ac.jp/"
     interval: 60s
-    client:
-      insecure: true
     conditions:
       - "[STATUS] == 200"
       - "[RESPONSE_TIME] < 5000"
 
   - name: 卓球部
     group: 課外活動団体
-    url: "https://ttc.club.nitech.ac.jp/"
+    url: "http://ttc.club.nitech.ac.jp/"
     interval: 60s
-    client:
-      insecure: true
     conditions:
       - "[STATUS] == 200"
       - "[RESPONSE_TIME] < 5000"
 
   - name: 吹奏楽団
     group: 課外活動団体
-    url: "https://nwo.club.nitech.ac.jp/"
+    url: "http://nwo.club.nitech.ac.jp/"
     interval: 60s
-    client:
-      insecure: true
     conditions:
       - "[STATUS] == 200"
       - "[RESPONSE_TIME] < 5000"
 
+  # 実際の Let's Encrypt 証明書だが更新が止まって期限切れのため、
+  # client.insecure で疎通確認しつつ証明書切れ自体も条件で検知する
   - name: アイスホッケー部
     group: 課外活動団体
     url: "https://nitech-icehockey.club.nitech.ac.jp/"
@@ -350,3 +345,4 @@ endpoints:
     conditions:
       - "[STATUS] == 200"
       - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"
