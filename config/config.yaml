@@ -6,6 +6,7 @@ ui:
   title: NITech Status
   header: NITech Status
   dashboard-subheading: 本サイトは、個人が運営している非公式サイトです。名古屋工業大学とは一切関係ありません。
+  default-sort-by: health
 
 endpoints:
   # 公式サイト・図書館
