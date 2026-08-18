@@ -9,7 +9,6 @@ ui:
   default-sort-by: health
 
 endpoints:
-  # 公式サイト・図書館
   - name: 大学公式サイト
     url: "https://www.nitech.ac.jp/"
     interval: 600s
@@ -18,7 +17,7 @@ endpoints:
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 附属図書館
+  - name: 名古屋工業大学図書館
     url: "https://www.lib.nitech.ac.jp/"
     interval: 600s
     conditions:
@@ -26,7 +25,7 @@ endpoints:
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 図書館蔵書検索（OPAC）
+  - name: 図書館蔵書検索（名工大OPAC）
     url: "https://opac.lib.nitech.ac.jp/opc/"
     interval: 600s
     conditions:
@@ -34,7 +33,6 @@ endpoints:
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  # 情報基盤
   - name: 情報基盤センター
     url: "https://www.cc.nitech.ac.jp/"
     interval: 600s
@@ -61,8 +59,7 @@ endpoints:
     conditions:
       - "[DNS_RCODE] == NOERROR"
 
-  # 教育システム
-  - name: Moodle（オンライン教材）
+  - name: Moodle
     url: "https://cms7.ict.nitech.ac.jp/moodle40a/"
     interval: 600s
     conditions:
@@ -78,7 +75,7 @@ endpoints:
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 履修登録システム
+  - name: 履修登録サイト
     url: "https://course.web.nitech.ac.jp/"
     interval: 600s
     conditions:
@@ -86,16 +83,15 @@ endpoints:
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  # 研究組織
-  - name: 基礎類
-    url: "https://kiso.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 基礎類
+  #   url: "https://kiso.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 規則・ガイドライン管理システム
+  - name: 規則集
     url: "https://kisoku.web.nitech.ac.jp/"
     interval: 600s
     conditions:
@@ -103,124 +99,123 @@ endpoints:
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 研究シーズ集
-    url: "https://seeds.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 研究シーズ集
+  #   url: "https://seeds.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: ソフトウェア集
-    url: "https://software.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: ソフトウェア集
+  #   url: "https://software.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 産学官金連携機構
-    url: "https://sanren.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 産学官金連携機構
+  #   url: "https://sanren.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: リサーチ・アドミニストレーション（URA）室
-    url: "https://rao.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: リサーチ・アドミニストレーション（URA）室
+  #   url: "https://rao.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: ダイバーシティ推進センター
-    url: "https://diversity.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: ダイバーシティ推進センター
+  #   url: "https://diversity.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 新領域学術院
-    url: "https://nfri.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 新領域学術院
+  #   url: "https://nfri.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 分析装置・機器紹介
-    url: "https://kiki.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 分析装置・機器紹介
+  #   url: "https://kiki.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: マテリアル先端リサーチインフラ事業
-    url: "https://nano.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: マテリアル先端リサーチインフラ事業
+  #   url: "https://nano.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 若手研究イノベータ養成センター
-    url: "http://wakate.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
+  # - name: 若手研究イノベータ養成センター
+  #   url: "http://wakate.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
 
-  - name: オープンサイエンスポータル
-    url: "https://oa.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: オープンサイエンスポータル
+  #   url: "https://oa.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: オプトバイオテクノロジー研究センター
-    url: "http://obtrc.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
+  # - name: オプトバイオテクノロジー研究センター
+  #   url: "http://obtrc.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
 
-  - name: NITech AI研究センター
-    url: "https://airc.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: NITech AI研究センター
+  #   url: "https://airc.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 留学生センター
-    url: "https://isc.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 留学生センター
+  #   url: "https://isc.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 卒業生連携室
-    url: "https://alum.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 卒業生連携室
+  #   url: "https://alum.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 工学教育総合センター
-    url: "http://educenter.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
+  # - name: 工学教育総合センター
+  #   url: "http://educenter.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
 
-  # 課外活動団体
   - name: コンピュータ倶楽部 NITMic
     url: "https://nitmic.club.nitech.ac.jp/"
     interval: 600s
@@ -237,962 +232,961 @@ endpoints:
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: アカペラサークル Grazie!!
-    url: "https://grazie.club.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 管弦楽団
-    url: "https://nitorchestra.club.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: S-EV（ソーラーカー部）
-    url: "https://solar-car.club.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 水泳部
-    url: "https://nitswimmingteam.club.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  # 以下4件は https が Plesk のデフォルト証明書（期限切れ・自己署名）のままで、
-  # 実際にはリダイレクトなしで http のコンテンツがそのまま使われている
-  - name: ボート部
-    url: "http://rowing.club.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 吹奏楽団
-    url: "http://nwo.club.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  # 実際の Let's Encrypt 証明書だが更新が止まって期限切れのため、
-  # client.insecure で疎通確認しつつ証明書切れ自体も条件で検知する
-  - name: アイスホッケー部
-    url: "https://nitech-icehockey.club.nitech.ac.jp/"
-    interval: 600s
-    client:
-      insecure: true
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  # 研究室
-  - name: 石井研究室
-    url: "https://bm-ishii.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 塩塚・迫研究室
-    url: "https://chem.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: chempro研究室
-    url: "http://chempro.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 福田・浅香・漆原研究室
-    url: "http://crystals.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 橋本研究室
-    url: "http://hashimotolab.web.nitech.ac.jp/index.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 早川知克研究室
-    url: "http://hayakawalab.web.nitech.ac.jp/lab_information/index.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 樋口・松原研究室
-    url: "https://higu-matsu-lab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 柿本・MARTIN研究室
-    url: "https://kakimotolab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: kgy研究室
-    url: "https://kgy.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 松岡真一研究室
-    url: "https://matsuoka.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: バイオマテリアル研究室
-    url: "http://meb.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 中西・杉本研究室
-    url: "https://nakanishi-sugimoto-lab.web.nitech.ac.jp/index.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 中山研究室
-    url: "http://nakayama.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 永田研究室
-    url: "https://polymerabc.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 白井研究室
-    url: "https://shiraigroup.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 高須・稲垣研究室
-    url: "https://takasu-lab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 大幸研究室
-    url: "https://daiko-lab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 表界面材料化学研究室（前田研究室）
-    url: "https://maedalab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: polymer-phys研究室
-    url: "https://polymer-phys.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 高木研究室
-    url: "https://takagi-lab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 築地研究室
-    url: "https://tsukijilab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 生命・応用化学科
-    url: "https://life-chem.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 青木純研究室
-    url: "http://www.ach.nitech.ac.jp/~polymer/aoki/main.htm"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 猪股・小澤研究室
-    url: "https://www.ach.nitech.ac.jp/inorg/ozawa/Japanese/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 岩田・南雲・廣田・古川研究室
-    url: "https://www.ach.nitech.ac.jp/chemeng/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 大北雅一研究室
-    url: "https://www.ach.nitech.ac.jp/physchem/ohkita/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 加藤禎人研究室
-    url: "http://www.ach.nitech.ac.jp/chemeng2/kakoken.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 川崎・石井・野崎研究室
-    url: "https://www.ach.nitech.ac.jp/inorg/kawasaki/jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 神取・錦野研究室
-    url: "https://www.ach.nitech.ac.jp/physchem/kandori/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 北川・飯國研究室
-    url: "https://www.ach.nitech.ac.jp/analysis19/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 出羽・近藤研究室
-    url: "https://www.ach.nitech.ac.jp/polymer/ydk/index.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 中村・安川研究室
-    url: "https://www.ach.nitech.ac.jp/organic/nakamura/index.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 山村・宮川研究室
-    url: "https://www.ach.nitech.ac.jp/organic/yamamura/toppage.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 小野克彦研究室
-    url: "https://www.ach.nitech.ac.jp/physchem/ono/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 片山耕大研究室
-    url: "https://www.ach.nitech.ac.jp/physchem/katayama/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 住井裕司研究室
-    url: "https://www.ach.nitech.ac.jp/organic/sumii/index.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 園山範之研究室
-    url: "https://www.ach.nitech.ac.jp/inorg/sonoyama/Site/Home.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 平下恒久研究室
-    url: "https://www.ach.nitech.ac.jp/organic/hirasita/hirasita.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 古谷祐詞研究室
-    url: "https://www.ach.nitech.ac.jp/physchem/furutani/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 水野稔久研究室
-    url: "https://www.ach.nitech.ac.jp/polymer/mizuno/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 柳生剛義研究室
-    url: "https://www.ach.nitech.ac.jp/inorg/yagyu/yagyuhome.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 山本靖研究室
-    url: "https://www.ach.nitech.ac.jp/physchem/yamamoto/0top.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 安達信泰研究室
-    url: "http://www.crl.nitech.ac.jp/comp/index-j.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 井田隆研究室
-    url: "http://www.crl.nitech.ac.jp/anal/index-j.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 藤正督研究室
-    url: "http://www.crl.nitech.ac.jp/proc/index-j.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 石井健斗研究室
-    url: "https://www.crl.nitech.ac.jp/NITech_Fujilab_HP/index.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: csp研究室
-    url: "https://csp.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 岩田研究室
-    url: "http://diele.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: エネルギー材料設計研究室
-    url: "http://enemat.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 萩原研究室
-    url: "http://hagihara.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: ナノ物性・光材料研究室（濱中研究室）
-    url: "http://hamanaka-lab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 池田研究室
-    url: "https://ikeda.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: ionics研究室
-    url: "http://ionics.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 金属反応学研究室
-    url: "http://kinhan.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 壬生研究室
-    url: "https://mibulab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: ナノ材料創製研究室
-    url: "https://nano-lab.web.nitech.ac.jp/index.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 尾形研究室
-    url: "https://ogt.web.nitech.ac.jp/"
-    interval: 600s
-    client:
-      insecure: true
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 大原研究室
-    url: "http://ohara-lab.web.nitech.ac.jp/ohara-lab/Welcome.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 小野研究室
-    url: "https://ono-lab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 構造物性科学研究室
-    url: "http://structure.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 光物性研究室（高橋研究室）
-    url: "http://thphyis.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 渡辺・佐藤研究室
-    url: "https://watanabe-sato.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 田村研究室
-    url: "https://tamuralab.web.nitech.ac.jp/"
-    interval: 600s
-    client:
-      insecure: true
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 物理工学科
-    url: "https://psae.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: aplab研究室
-    url: "https://aplab.web.nitech.ac.jp/members/sakaki/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 医用生体工学研究室
-    url: "https://biomech.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: cem研究室
-    url: "https://cem.web.nitech.ac.jp/professor.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 複雑流体制御研究室
-    url: "https://complex-fluids.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: FR+HRI研究チーム
-    url: "https://hi.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 電磁界研究ラボ（若土研究室）
-    url: "https://hw.web.nitech.ac.jp/index.html"
-    interval: 600s
-    client:
-      insecure: true
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: icontrol研究室
-    url: "https://icontrol.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: ik-lab研究室
-    url: "https://ik-lab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 小坂研究室
-    url: "http://kosaka-lab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 機械制御研究室
-    url: "https://mcontrol.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 岩崎研究室
-    url: "https://mechatronics.web.nitech.ac.jp/iwasaki/index_j.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 三好研究室
-    url: "https://miyoshi.web.nitech.ac.jp/index.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: motion研究室
-    url: "http://motion.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 久保研究室
-    url: "http://nitride-center.web.nitech.ac.jp/~egawa-lab/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 岡本研究室
-    url: "https://okamoto.web.nitech.ac.jp/wordpress/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: power研究室
-    url: "https://power.web.nitech.ac.jp/pslab/index.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: Robotics Lab
-    url: "http://rah.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: smd-lab研究室
-    url: "https://smd-lab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 鈴木研究室
-    url: "http://suzuki.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: wlab研究室
-    url: "https://wlab.web.nitech.ac.jp/top.htm"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 安井研究室
-    url: "https://yasui-lab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 安部研究室
-    url: "https://abe-lab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: energyconversion研究室
-    url: "https://energyconversion.web.nitech.ac.jp/Toppage.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 流動デザイン研究室（森西・山田研）
-    url: "https://flow-design-lab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: GDAC Lab
-    url: "https://gdaclab.web.nitech.ac.jp/ja/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: Haptics Lab
-    url: "https://haptics.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: mdlab研究室
-    url: "https://mdlab.web.nitech.ac.jp/ja/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: mpl研究室
-    url: "https://mpl.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: Nanjo Laboratory
-    url: "https://nanjo.web.nitech.ac.jp/top-page.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: Optical and High-Frequency Technology Laboratory
-    url: "https://opto.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: s-lab研究室
-    url: "https://s-lab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 加藤慎也研究室
-    url: "https://shinyakatolab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 生産機器研究室
-    url: "https://tmlab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: Virtual Reality and Mechatronics Lab
-    url: "https://vrmech.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 電気・機械工学科
-    url: "https://elemech.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 黒柳研究室
-    url: "https://bwlab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: discoopt研究室
-    url: "https://discoopt.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: Complex Systems Dynamics Laboratory（G.Tanaka Lab）
-    url: "https://dyn.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 伊藤嘉浩研究室
-    url: "https://en.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 福嶋研究室
-    url: "https://fukushima.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 布目研究室
-    url: "https://inl.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: iplab研究室
-    url: "https://iplab.web.nitech.ac.jp/2020/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 松添研究室
-    url: "http://matsuzoe.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-
-  - name: 中島研究室
-    url: "https://nakashima.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 犬塚研究室（ML/KDD Group）
-    url: "https://nous.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 山岸研究室
-    url: "https://numbertheory.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 大塚孝信研究室
-    url: "https://otsukalab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 和田山・中井研究室
-    url: "https://twlab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 打矢研究室
-    url: "https://uchiya.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: Yamamoto Laboratory
-    url: "https://yamamoto.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 櫻井研究室
-    url: "https://agent.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 舟橋研究室
-    url: "https://fun.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
-
-  - name: 齋藤・掛井研究室
-    url: "https://www.ssn.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: アカペラサークル Grazie!!
+  #   url: "https://grazie.club.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 管弦楽団
+  #   url: "https://nitorchestra.club.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: S-EV（ソーラーカー部）
+  #   url: "https://solar-car.club.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 水泳部
+  #   url: "https://nitswimmingteam.club.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # # 以下4件は https が Plesk のデフォルト証明書（期限切れ・自己署名）のままで、
+  # # 実際にはリダイレクトなしで http のコンテンツがそのまま使われている
+  # - name: ボート部
+  #   url: "http://rowing.club.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 吹奏楽団
+  #   url: "http://nwo.club.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # # 実際の Let's Encrypt 証明書だが更新が止まって期限切れのため、
+  # # client.insecure で疎通確認しつつ証明書切れ自体も条件で検知する
+  # - name: アイスホッケー部
+  #   url: "https://nitech-icehockey.club.nitech.ac.jp/"
+  #   interval: 600s
+  #   client:
+  #     insecure: true
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 石井研究室
+  #   url: "https://bm-ishii.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 塩塚・迫研究室
+  #   url: "https://chem.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: chempro研究室
+  #   url: "http://chempro.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 福田・浅香・漆原研究室
+  #   url: "http://crystals.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 橋本研究室
+  #   url: "http://hashimotolab.web.nitech.ac.jp/index.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 早川知克研究室
+  #   url: "http://hayakawalab.web.nitech.ac.jp/lab_information/index.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 樋口・松原研究室
+  #   url: "https://higu-matsu-lab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 柿本・MARTIN研究室
+  #   url: "https://kakimotolab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: kgy研究室
+  #   url: "https://kgy.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 松岡真一研究室
+  #   url: "https://matsuoka.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: バイオマテリアル研究室
+  #   url: "http://meb.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 中西・杉本研究室
+  #   url: "https://nakanishi-sugimoto-lab.web.nitech.ac.jp/index.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 中山研究室
+  #   url: "http://nakayama.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 永田研究室
+  #   url: "https://polymerabc.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 白井研究室
+  #   url: "https://shiraigroup.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 高須・稲垣研究室
+  #   url: "https://takasu-lab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 大幸研究室
+  #   url: "https://daiko-lab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 表界面材料化学研究室（前田研究室）
+  #   url: "https://maedalab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: polymer-phys研究室
+  #   url: "https://polymer-phys.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 高木研究室
+  #   url: "https://takagi-lab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 築地研究室
+  #   url: "https://tsukijilab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 生命・応用化学科
+  #   url: "https://life-chem.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 青木純研究室
+  #   url: "http://www.ach.nitech.ac.jp/~polymer/aoki/main.htm"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 猪股・小澤研究室
+  #   url: "https://www.ach.nitech.ac.jp/inorg/ozawa/Japanese/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 岩田・南雲・廣田・古川研究室
+  #   url: "https://www.ach.nitech.ac.jp/chemeng/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 大北雅一研究室
+  #   url: "https://www.ach.nitech.ac.jp/physchem/ohkita/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 加藤禎人研究室
+  #   url: "http://www.ach.nitech.ac.jp/chemeng2/kakoken.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 川崎・石井・野崎研究室
+  #   url: "https://www.ach.nitech.ac.jp/inorg/kawasaki/jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 神取・錦野研究室
+  #   url: "https://www.ach.nitech.ac.jp/physchem/kandori/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 北川・飯國研究室
+  #   url: "https://www.ach.nitech.ac.jp/analysis19/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 出羽・近藤研究室
+  #   url: "https://www.ach.nitech.ac.jp/polymer/ydk/index.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 中村・安川研究室
+  #   url: "https://www.ach.nitech.ac.jp/organic/nakamura/index.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 山村・宮川研究室
+  #   url: "https://www.ach.nitech.ac.jp/organic/yamamura/toppage.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 小野克彦研究室
+  #   url: "https://www.ach.nitech.ac.jp/physchem/ono/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 片山耕大研究室
+  #   url: "https://www.ach.nitech.ac.jp/physchem/katayama/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 住井裕司研究室
+  #   url: "https://www.ach.nitech.ac.jp/organic/sumii/index.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 園山範之研究室
+  #   url: "https://www.ach.nitech.ac.jp/inorg/sonoyama/Site/Home.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 平下恒久研究室
+  #   url: "https://www.ach.nitech.ac.jp/organic/hirasita/hirasita.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 古谷祐詞研究室
+  #   url: "https://www.ach.nitech.ac.jp/physchem/furutani/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 水野稔久研究室
+  #   url: "https://www.ach.nitech.ac.jp/polymer/mizuno/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 柳生剛義研究室
+  #   url: "https://www.ach.nitech.ac.jp/inorg/yagyu/yagyuhome.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 山本靖研究室
+  #   url: "https://www.ach.nitech.ac.jp/physchem/yamamoto/0top.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 安達信泰研究室
+  #   url: "http://www.crl.nitech.ac.jp/comp/index-j.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 井田隆研究室
+  #   url: "http://www.crl.nitech.ac.jp/anal/index-j.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 藤正督研究室
+  #   url: "http://www.crl.nitech.ac.jp/proc/index-j.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 石井健斗研究室
+  #   url: "https://www.crl.nitech.ac.jp/NITech_Fujilab_HP/index.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: csp研究室
+  #   url: "https://csp.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 岩田研究室
+  #   url: "http://diele.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: エネルギー材料設計研究室
+  #   url: "http://enemat.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 萩原研究室
+  #   url: "http://hagihara.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: ナノ物性・光材料研究室（濱中研究室）
+  #   url: "http://hamanaka-lab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 池田研究室
+  #   url: "https://ikeda.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: ionics研究室
+  #   url: "http://ionics.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 金属反応学研究室
+  #   url: "http://kinhan.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 壬生研究室
+  #   url: "https://mibulab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: ナノ材料創製研究室
+  #   url: "https://nano-lab.web.nitech.ac.jp/index.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 尾形研究室
+  #   url: "https://ogt.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   client:
+  #     insecure: true
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 大原研究室
+  #   url: "http://ohara-lab.web.nitech.ac.jp/ohara-lab/Welcome.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 小野研究室
+  #   url: "https://ono-lab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 構造物性科学研究室
+  #   url: "http://structure.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 光物性研究室（高橋研究室）
+  #   url: "http://thphyis.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 渡辺・佐藤研究室
+  #   url: "https://watanabe-sato.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 田村研究室
+  #   url: "https://tamuralab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   client:
+  #     insecure: true
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 物理工学科
+  #   url: "https://psae.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: aplab研究室
+  #   url: "https://aplab.web.nitech.ac.jp/members/sakaki/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 医用生体工学研究室
+  #   url: "https://biomech.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: cem研究室
+  #   url: "https://cem.web.nitech.ac.jp/professor.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 複雑流体制御研究室
+  #   url: "https://complex-fluids.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: FR+HRI研究チーム
+  #   url: "https://hi.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 電磁界研究ラボ（若土研究室）
+  #   url: "https://hw.web.nitech.ac.jp/index.html"
+  #   interval: 600s
+  #   client:
+  #     insecure: true
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: icontrol研究室
+  #   url: "https://icontrol.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: ik-lab研究室
+  #   url: "https://ik-lab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 小坂研究室
+  #   url: "http://kosaka-lab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 機械制御研究室
+  #   url: "https://mcontrol.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 岩崎研究室
+  #   url: "https://mechatronics.web.nitech.ac.jp/iwasaki/index_j.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 三好研究室
+  #   url: "https://miyoshi.web.nitech.ac.jp/index.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: motion研究室
+  #   url: "http://motion.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 久保研究室
+  #   url: "http://nitride-center.web.nitech.ac.jp/~egawa-lab/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 岡本研究室
+  #   url: "https://okamoto.web.nitech.ac.jp/wordpress/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: power研究室
+  #   url: "https://power.web.nitech.ac.jp/pslab/index.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: Robotics Lab
+  #   url: "http://rah.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: smd-lab研究室
+  #   url: "https://smd-lab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 鈴木研究室
+  #   url: "http://suzuki.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: wlab研究室
+  #   url: "https://wlab.web.nitech.ac.jp/top.htm"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 安井研究室
+  #   url: "https://yasui-lab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 安部研究室
+  #   url: "https://abe-lab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: energyconversion研究室
+  #   url: "https://energyconversion.web.nitech.ac.jp/Toppage.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 流動デザイン研究室（森西・山田研）
+  #   url: "https://flow-design-lab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: GDAC Lab
+  #   url: "https://gdaclab.web.nitech.ac.jp/ja/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: Haptics Lab
+  #   url: "https://haptics.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: mdlab研究室
+  #   url: "https://mdlab.web.nitech.ac.jp/ja/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: mpl研究室
+  #   url: "https://mpl.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: Nanjo Laboratory
+  #   url: "https://nanjo.web.nitech.ac.jp/top-page.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: Optical and High-Frequency Technology Laboratory
+  #   url: "https://opto.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: s-lab研究室
+  #   url: "https://s-lab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 加藤慎也研究室
+  #   url: "https://shinyakatolab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 生産機器研究室
+  #   url: "https://tmlab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: Virtual Reality and Mechatronics Lab
+  #   url: "https://vrmech.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 電気・機械工学科
+  #   url: "https://elemech.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 黒柳研究室
+  #   url: "https://bwlab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: discoopt研究室
+  #   url: "https://discoopt.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: Complex Systems Dynamics Laboratory（G.Tanaka Lab）
+  #   url: "https://dyn.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 伊藤嘉浩研究室
+  #   url: "https://en.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 福嶋研究室
+  #   url: "https://fukushima.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 布目研究室
+  #   url: "https://inl.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: iplab研究室
+  #   url: "https://iplab.web.nitech.ac.jp/2020/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 松添研究室
+  #   url: "http://matsuzoe.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+
+  # - name: 中島研究室
+  #   url: "https://nakashima.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 犬塚研究室（ML/KDD Group）
+  #   url: "https://nous.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 山岸研究室
+  #   url: "https://numbertheory.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 大塚孝信研究室
+  #   url: "https://otsukalab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 和田山・中井研究室
+  #   url: "https://twlab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 打矢研究室
+  #   url: "https://uchiya.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: Yamamoto Laboratory
+  #   url: "https://yamamoto.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 櫻井研究室
+  #   url: "https://agent.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 舟橋研究室
+  #   url: "https://fun.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # - name: 齋藤・掛井研究室
+  #   url: "https://www.ssn.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
   - name: 情報工学科
     url: "https://www.cs.nitech.ac.jp/"
@@ -1202,175 +1196,175 @@ endpoints:
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 片山・金・立岩研究室
-    url: "http://tk-www.elcom.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
+  # - name: 片山・金・立岩研究室
+  #   url: "http://tk-www.elcom.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
 
-  - name: 加藤・谷研究室
-    url: "http://www.katolab.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
+  # - name: 加藤・谷研究室
+  #   url: "http://www.katolab.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
 
-  - name: 烏山研究室
-    url: "https://www-als.ics.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
+  # - name: 烏山研究室
+  #   url: "https://www-als.ics.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
 
-  - name: 白松・長澤研究室
-    url: "http://www.srmt.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
+  # - name: 白松・長澤研究室
+  #   url: "http://www.srmt.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
 
-  - name: 伊藤宏隆研究室
-    url: "http://www.center.nitech.ac.jp/~itoh/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
+  # - name: 伊藤宏隆研究室
+  #   url: "http://www.center.nitech.ac.jp/~itoh/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
 
-  - name: 佐藤・坂上研究室
-    url: "http://www.cv.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
+  # - name: 佐藤・坂上研究室
+  #   url: "http://www.cv.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
 
-  - name: 李・上乃研究室
-    url: "https://www.slp.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 李・上乃研究室
+  #   url: "https://www.slp.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 南角・橋本研究室
-    url: "https://www.sp.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 南角・橋本研究室
+  #   url: "https://www.sp.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 社会工学科（経営システム分野）
-    url: "https://sme.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 社会工学科（経営システム分野）
+  #   url: "https://sme.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 岩本研究室（構造系振動班）
-    url: "https://iwa.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 岩本研究室（構造系振動班）
+  #   url: "https://iwa.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 構造システム工学研究室
-    url: "http://str.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
+  # - name: 構造システム工学研究室
+  #   url: "http://str.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
 
-  - name: 河川工学研究室
-    url: "http://suiko.web.nitech.ac.jp/~river/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
+  # - name: 河川工学研究室
+  #   url: "http://suiko.web.nitech.ac.jp/~river/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
 
-  - name: 都市基盤計画分野研究室
-    url: "http://suim.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
+  # - name: 都市基盤計画分野研究室
+  #   url: "http://suim.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
 
-  - name: NIT構造研究室
-    url: "https://kozo.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: NIT構造研究室
+  #   url: "https://kozo.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 京川研究室
-    url: "https://kyokawa-lab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 京川研究室
+  #   url: "https://kyokawa-lab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 海岸工学研究室
-    url: "https://suiko.web.nitech.ac.jp/coast/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 海岸工学研究室
+  #   url: "https://suiko.web.nitech.ac.jp/coast/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 都市交通研究室
-    url: "https://utrlab.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 都市交通研究室
+  #   url: "https://utrlab.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 社会工学科（環境都市分野）
-    url: "https://civil.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 社会工学科（環境都市分野）
+  #   url: "https://civil.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 社会工学科（学科サイト）
-    url: "https://shakai.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 社会工学科（学科サイト）
+  #   url: "https://shakai.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: カモラボ（加茂研究室）
-    url: "http://kamolabo.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
+  # - name: カモラボ（加茂研究室）
+  #   url: "http://kamolabo.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
 
-  - name: 建材研究室
-    url: "http://kenzai.web.nitech.ac.jp/index.html"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
+  # - name: 建材研究室
+  #   url: "http://kenzai.web.nitech.ac.jp/index.html"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
 
-  - name: 楠原研究室
-    url: "https://kslb.web.nitech.ac.jp/ja/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 楠原研究室
+  #   url: "https://kslb.web.nitech.ac.jp/ja/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 社会工学科（建築・デザイン分野）
-    url: "https://ad.web.nitech.ac.jp/"
-    interval: 600s
-    conditions:
-      - "[STATUS] == 200"
-      - "[RESPONSE_TIME] < 10000"
-      - "[CERTIFICATE_EXPIRATION] > 168h"
+  # - name: 社会工学科（建築・デザイン分野）
+  #   url: "https://ad.web.nitech.ac.jp/"
+  #   interval: 600s
+  #   conditions:
+  #     - "[STATUS] == 200"
+  #     - "[RESPONSE_TIME] < 10000"
+  #     - "[CERTIFICATE_EXPIRATION] > 168h"
