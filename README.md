@@ -38,7 +38,6 @@ docker compose down
 ```
 
 Gatus の永続化データ（SQLite）は named volume（`gatus-data`）に保存されます。
-ローカルディレクトリにはバインドマウントしていないため、OneDrive 等の同期対象にはなりません。
 
 ## 免責事項
 
