@@ -25,9 +25,7 @@
 
 ## ローカルでの動作確認
 
-Gatus は事前ビルド済みの Docker イメージを設定ファイルで動かすだけなので、
-Dev Container のようなツールチェーン分離は不要です。Docker が使える環境であれば
-そのまま `docker compose` で起動できます。
+Docker と Docker Compose が必要です。
 
 ```sh
 # フォアグラウンドで起動（http://localhost:8080 で確認）
