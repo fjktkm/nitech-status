@@ -5,7 +5,7 @@ storage:
 ui:
   title: NITech Status
   header: NITech Status
-  dashboard-subheading: 本サイトは有志が個人の立場で運営する非公式のものであり、名古屋工業大学とは関係がなく、同大学の承認・後援を受けたものでもありません。
+  dashboard-subheading: 本サイトは非公式サイトです。個人が運営しており、名古屋工業大学とは一切関係ありません。
 
 endpoints:
   # 全学
