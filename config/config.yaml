@@ -93,3 +93,13 @@ endpoints:
       - "[STATUS] == 200"
       - "[RESPONSE_TIME] < 5000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
+
+  # 課外活動団体
+  - name: コンピュータ倶楽部 NITMic
+    group: 課外活動団体
+    url: "https://nitmic.club.nitech.ac.jp/"
+    interval: 60s
+    conditions:
+      - "[STATUS] == 200"
+      - "[RESPONSE_TIME] < 5000"
+      - "[CERTIFICATE_EXPIRATION] > 168h"

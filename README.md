@@ -18,6 +18,7 @@
 | Moodle（オンライン教材） | 教育システム | https://cms7.ict.nitech.ac.jp/moodle40a/ |
 | シラバス公開システム | 教育システム | https://syllabus.ict.nitech.ac.jp/ |
 | 履修登録システム | 教育システム | https://course.web.nitech.ac.jp/ |
+| コンピュータ倶楽部 NITMic | 課外活動団体 | https://nitmic.club.nitech.ac.jp/ |
 
 対象を追加・変更する場合は [config/config.yaml](config/config.yaml) を編集してください。
 設定項目の詳細は [Gatus のドキュメント](https://github.com/TwiN/gatus#configuration) を参照してください。
