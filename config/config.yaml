@@ -49,7 +49,7 @@ endpoints:
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 権威DNSサーバー ns1.nitech.ac.jp
+  - name: 権威DNSサーバー（ns1.nitech.ac.jp）
     url: "133.68.21.192"
     interval: 600s
     dns:
@@ -58,7 +58,7 @@ endpoints:
     conditions:
       - "[DNS_RCODE] == NOERROR"
 
-  - name: 権威DNSサーバー ns2.nitech.ac.jp
+  - name: 権威DNSサーバー（ns2.nitech.ac.jp）
     url: "133.68.2.1"
     interval: 600s
     dns:
