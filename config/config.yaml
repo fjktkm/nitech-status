@@ -83,7 +83,7 @@ endpoints:
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 教育用端末 稼働状況
+  - name: 教育用PC利用者数
     url: "https://util-rate.web.nitech.ac.jp/mobile/"
     interval: 600s
     conditions:
