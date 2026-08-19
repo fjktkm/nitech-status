@@ -1212,7 +1212,7 @@ endpoints:
   #     - "[RESPONSE_TIME] < 10000"
   #     - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 情報工学科
+  - name: 情報工学科・工学専攻 情報工学系
     url: "https://www.cs.nitech.ac.jp/"
     interval: 600s
     conditions:
