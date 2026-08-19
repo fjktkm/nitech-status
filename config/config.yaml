@@ -17,7 +17,7 @@ endpoints:
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 名古屋工業大学図書館
+  - name: 図書館
     url: "https://www.lib.nitech.ac.jp/"
     interval: 600s
     conditions:
