@@ -25,7 +25,7 @@ endpoints:
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 図書館蔵書検索（名工大OPAC）
+  - name: 図書館蔵書検索（名工大 OPAC）
     url: "https://opac.lib.nitech.ac.jp/opc/"
     interval: 600s
     conditions:
@@ -49,7 +49,7 @@ endpoints:
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 権威DNSサーバー（ns1.nitech.ac.jp）
+  - name: 権威 DNS サーバー（ns1.nitech.ac.jp）
     url: "133.68.21.192"
     interval: 600s
     dns:
@@ -58,7 +58,7 @@ endpoints:
     conditions:
       - "[DNS_RCODE] == NOERROR"
 
-  - name: 権威DNSサーバー（ns2.nitech.ac.jp）
+  - name: 権威 DNS サーバー（ns2.nitech.ac.jp）
     url: "133.68.2.1"
     interval: 600s
     dns:
@@ -83,7 +83,7 @@ endpoints:
       - "[RESPONSE_TIME] < 10000"
       - "[CERTIFICATE_EXPIRATION] > 168h"
 
-  - name: 教育用PC利用者数
+  - name: 教育用 PC 利用者数
     url: "https://util-rate.web.nitech.ac.jp/mobile/"
     interval: 600s
     conditions:
