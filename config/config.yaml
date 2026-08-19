@@ -67,7 +67,7 @@ endpoints:
     conditions:
       - "[DNS_RCODE] == NOERROR"
 
-  - name: Moodle
+  - name: オンライン授業サポートシステム（Moodle）
     url: "https://cms7.ict.nitech.ac.jp/moodle40a/"
     interval: 600s
     conditions:
